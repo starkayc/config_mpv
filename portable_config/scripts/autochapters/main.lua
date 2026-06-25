@@ -32,7 +32,7 @@ local types = {
 }
 
 local api_url = "https://api.aniskip.com/v2"
-local db_url = "https://github.com/manami-project/anime-offline-database/raw/master/anime-offline-database-minified.json"
+local db_url = "https://github.com/manami-project/anime-offline-database/releases/download/latest/anime-offline-database-minified.json"
 local relations_url = "https://github.com/erengy/anime-relations/raw/master/anime-relations.txt"
 local placeholder_title = ""
 
@@ -57,7 +57,7 @@ local function guess(path, auto)
 
     local data = utils.parse_json(guessit.stdout)
     if type(data) ~= "table" then
-        log("autochapters: couldn't parse media filename, is guessit installed?")
+        log("")
         return nil, nil
     end
 
